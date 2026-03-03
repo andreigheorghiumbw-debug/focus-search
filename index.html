@@ -38,18 +38,7 @@
             position: relative;
             z-index: 2;
         }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .tagline { font-size: 1.1rem; }
-            .mockup-container { margin: 20px 10px; }
-            .mockup-content { padding: 20px 10px; }
-            .extension-popup { width: calc(100% - 40px); max-width: 280px; }
-            .features { grid-template-columns: 1fr; gap: 15px; padding: 0 10px; }
-            .download-box { margin: 30px 10px; padding: 20px; }
-            .btn { font-size: 1.1rem; padding: 15px 25px; }
-        }
-        .popup-btn { background: #1a73e8; color: white; border: none; padding: 8px; border-radius: 4px; width: 100%; margin-bottom: 8px; font-weight: bold; cursor: default; }
+        .popup-btn { background: #1a73e8; color: white; border: none; padding: 8px; border-radius: 4px; width: 100%; margin-bottom: 8px; font-weight: bold; cursor: default; box-sizing: border-box; }
         .popup-btn.slop { background: #ea4335; }
         .popup-btn.tech { background: #34a853; }
         .popup-badge { font-size: 9px; background: #e8f0fe; color: #1a73e8; padding: 2px 6px; border-radius: 4px; float: right; }
@@ -68,11 +57,22 @@
         .bmc-section { margin-top: 80px; padding: 60px 20px; background: #fffaf0; border-radius: 20px; }
         .bmc-btn { background: #FFDD00; color: #000; padding: 15px 35px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; box-shadow: 0 4px 0 #d4a017; transition: all 0.1s; }
         .bmc-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #d4a017; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .tagline { font-size: 1.1rem; }
+            .mockup-container { margin: 20px 10px; }
+            .mockup-content { padding: 20px 10px; }
+            .extension-popup { width: calc(100% - 40px); max-width: 280px; }
+            .features { grid-template-columns: 1fr; gap: 15px; padding: 0 10px; }
+            .download-box { margin: 30px 10px; padding: 20px; }
+            .btn { font-size: 1.1rem; padding: 15px 25px; }
+        }
     </style>
 </head>
 <body>
     <div class="hero">
-        <div style="width: 80px; height: 80px; background: #1a73e8; border-radius: 18px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 40px; font-weight: bold; box-shadow: 0 8px 16px rgba(26,115,232,0.3);">F</div>
+        <div class="logo-container" style="width: 80px; height: 80px; margin: 0 auto 20px; background: var(--primary); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 40px; font-weight: bold; box-shadow: 0 10px 20px rgba(26,115,232,0.2);">F</div>
         <h1>FocusSearch</h1>
         <p class="tagline">The "Human-Only" search filter. One click to purge the AI-slop and restore the classic web.</p>
     </div>
@@ -80,20 +80,20 @@
     <div class="mockup-container">
         <div class="mockup-header">
             <div class="dot"></div><div class="dot" style="background:#fbbc05"></div><div class="dot" style="background:#34a853"></div>
-            <div style="margin-left: 10px; font-size: 11px; color: #9aa0a6;">google.com/search?q=best+headphones+2026</div>
+            <div style="margin-left: 10px; font-size: 11px; color: #9aa0a6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">google.com/search?q=best+headphones...</div>
         </div>
         <div class="mockup-content">
-            <div style="background: #e8f0fe; height: 100px; border-radius: 8px; margin-bottom: 20px; opacity: 0.4; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #1a73e8;">AI OVERVIEW (HIDDEN)</div>
+            <div style="width: 100%; background: #e8f0fe; height: 80px; border-radius: 8px; margin-bottom: 20px; opacity: 0.4; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #1a73e8; font-size: 14px;">AI OVERVIEW (HIDDEN)</div>
             
             <!-- Floating Popup Mockup -->
             <div class="extension-popup">
-                <div style="font-weight: bold; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 12px;">FocusSearch <span class="badge">v2.6</span></div>
-                <div style="font-size: 10px; color: #5f6368; margin-bottom: 8px; text-transform: uppercase;">Smart Filters</div>
+                <div style="font-weight: bold; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 12px; text-align: left;">FocusSearch <span class="badge">v2.6</span></div>
+                <div style="font-size: 10px; color: #5f6368; margin-bottom: 8px; text-transform: uppercase; text-align: left;">Smart Filters</div>
                 <div class="popup-btn">Show Discussions (Reddit)</div>
                 <div class="popup-btn tech">Show Technical (GitHub/HN)</div>
-                <div style="font-size: 10px; color: #5f6368; margin-bottom: 8px; text-transform: uppercase; margin-top: 15px;">Cleanup Tools</div>
+                <div style="font-size: 10px; color: #5f6368; margin-bottom: 8px; text-transform: uppercase; margin-top: 15px; text-align: left;">Cleanup Tools</div>
                 <div class="popup-btn slop">The Slop Killer (No Pinterest)</div>
-                <div style="background: #f1f3f4; padding: 8px; border-radius: 4px; text-align: center; border: 1px solid #1a73e8; color: #1a73e8; font-weight: bold;">AI Detox (Classic Web)</div>
+                <div style="background: #f1f3f4; padding: 8px; border-radius: 4px; text-align: center; border: 1px solid #1a73e8; color: #1a73e8; font-weight: bold; cursor: default;">AI Detox (Classic Web)</div>
             </div>
         </div>
     </div>
