@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusSearch | Take Back Your Search</title>
+    <style>
+        :root { --primary: #1a73e8; --bg: #ffffff; --text: #202124; }
+        body { font-family: -apple-system, system-ui, sans-serif; line-height: 1.6; color: var(--text); max-width: 900px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+        .hero { margin-bottom: 50px; }
+        h1 { font-size: 3.5rem; margin-bottom: 10px; color: var(--primary); font-weight: 800; letter-spacing: -1px; }
+        .tagline { font-size: 1.5rem; color: #5f6368; max-width: 600px; margin: 0 auto; }
+        
+        .mockup-container { 
+            position: relative; 
+            background: #fff; 
+            border: 1px solid #dadce0; 
+            border-radius: 12px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+            margin: 50px auto; 
+            overflow: hidden;
+            max-width: 700px;
+        }
+        .mockup-header { background: #f1f3f4; padding: 10px; border-bottom: 1px solid #dadce0; display: flex; align-items: center; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: #ea4335; margin-right: 5px; }
+        .mockup-content { padding: 40px; text-align: left; }
+        
+        /* The Extension Popup Mockup */
+        .extension-popup {
+            width: 280px;
+            background: #fff;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 15px;
+            font-size: 13px;
+            margin: 0 auto;
+        }
+        .popup-btn { background: #1a73e8; color: white; border: none; padding: 8px; border-radius: 4px; width: 100%; margin-bottom: 8px; font-weight: bold; cursor: default; }
+        .popup-btn.slop { background: #ea4335; }
+        .popup-btn.tech { background: #34a853; }
+        .popup-badge { font-size: 9px; background: #e8f0fe; color: #1a73e8; padding: 2px 6px; border-radius: 4px; float: right; }
+
+        .download-box { background: #f8f9fa; border: 2px solid var(--primary); padding: 40px; border-radius: 16px; margin: 60px 0; }
+        .btn { background: var(--primary); color: white; padding: 18px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.3rem; display: inline-block; transition: all 0.2s; box-shadow: 0 4px 6px rgba(26,115,232,0.2); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(26,115,232,0.3); }
+        
+        .steps { text-align: left; background: #fff; padding: 25px; border: 1px solid #dadce0; border-radius: 12px; margin-top: 30px; }
+        .step-num { background: var(--primary); color: white; width: 26px; height: 26px; display: inline-block; border-radius: 50%; text-align: center; line-height: 26px; margin-right: 12px; font-size: 0.9rem; font-weight: bold; }
+        
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 60px 0; text-align: left; }
+        .feature-card { padding: 20px; border-radius: 12px; border: 1px solid #eee; }
+        .feature-icon { font-size: 24px; margin-bottom: 10px; }
+
+        .bmc-section { margin-top: 80px; padding: 60px 20px; background: #fffaf0; border-radius: 20px; }
+        .bmc-btn { background: #FFDD00; color: #000; padding: 15px 35px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; box-shadow: 0 4px 0 #d4a017; transition: all 0.1s; }
+        .bmc-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #d4a017; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="focus_search_extension/icon128.png" width="80" alt="Logo" style="margin-bottom: 20px;">
+        <h1>FocusSearch</h1>
+        <p class="tagline">The "Human-Only" search filter. One click to purge the AI-slop and restore the classic web.</p>
+    </div>
+
+    <div class="mockup-container">
+        <div class="mockup-header">
+            <div class="dot"></div><div class="dot" style="background:#fbbc05"></div><div class="dot" style="background:#34a853"></div>
+            <div style="margin-left: 10px; font-size: 11px; color: #9aa0a6;">google.com/search?q=best+headphones+2026</div>
+        </div>
+        <div class="mockup-content">
+            <div style="background: #e8f0fe; height: 100px; border-radius: 8px; margin-bottom: 20px; opacity: 0.4; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #1a73e8;">AI OVERVIEW (HIDDEN)</div>
+            
+            <!-- Floating Popup Mockup -->
+            <div class="extension-popup">
+                <div style="font-weight: bold; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-bottom: 12px;">FocusSearch <span class="badge">v2.6</span></div>
+                <div style="font-size: 10px; color: #5f6368; margin-bottom: 8px; text-transform: uppercase;">Smart Filters</div>
+                <div class="popup-btn">Show Discussions (Reddit)</div>
+                <div class="popup-btn tech">Show Technical (GitHub/HN)</div>
+                <div style="font-size: 10px; color: #5f6368; margin-bottom: 8px; text-transform: uppercase; margin-top: 15px;">Cleanup Tools</div>
+                <div class="popup-btn slop">The Slop Killer (No Pinterest)</div>
+                <div style="background: #f1f3f4; padding: 8px; border-radius: 4px; text-align: center; border: 1px solid #1a73e8; color: #1a73e8; font-weight: bold;">AI Detox (Classic Web)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Slop Killer</h3>
+            <p>Automatically purges Pinterest, WikiHow, and known low-value content farms from your search results.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧪</div>
+            <h3>AI Detox</h3>
+            <p>One-click "udm=14" mode that forces Google to return classic web results without AI overviews or ads.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3>Human Conversations</h3>
+            <p>Filters results for real human discourse on Reddit, Quora, and Forums.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💻</div>
+            <h3>Engineering Focus</h3>
+            <p>Instant drill-down into high-signal technical sites like GitHub and Hacker News.</p>
+        </div>
+    </div>
+
+    <div class="download-box">
+        <h3>🚀 Download FocusSearch v2.6</h3>
+        <p>Take back your browser today. Direct download (Free).</p>
+        <a href="focus_search_extension.zip" class="btn" download>Download Extension (.zip)</a>
+        
+        <div class="steps">
+            <h4>Quick Install Instructions:</h4>
+            <p><span class="step-num">1</span> Download and <b>Unzip</b> the file.</p>
+            <p><span class="step-num">2</span> Go to <code>chrome://extensions</code> in your browser.</p>
+            <p><span class="step-num">3</span> Enable <b>Developer Mode</b> (top right).</p>
+            <p><span class="step-num">4</span> Click <b>Load Unpacked</b> and select the folder.</p>
+        </div>
+    </div>
+
+    <div class="bmc-section">
+        <h3>Support Independent Devs</h3>
+        <p>Google charges listing fees for tools that fix their own search. I'm bypassing the gatekeeper and releasing directly to you.</p>
+        <a href="https://www.buymeacoffee.com/andrei" target="_blank" class="bmc-btn">☕ Buy Me a Coffee</a>
+    </div>
+
+    <footer style="margin-top: 50px; font-size: 12px; color: #9aa0a6;">
+        Built for humans in 2026. No tracking. No data collection.
+    </footer>
+</body>
+</html>

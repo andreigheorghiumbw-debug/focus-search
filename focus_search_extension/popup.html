@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 320px; padding: 15px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f8f9fa; }
+    h2 { font-size: 18px; margin-bottom: 15px; color: #202124; text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-top: 0; }
+    .section-title { font-weight: bold; font-size: 11px; color: #5f6368; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 0.8px; display: flex; justify-content: space-between; }
+    .badge { font-size: 9px; background: #e8f0fe; color: #1a73e8; padding: 2px 6px; border-radius: 4px; }
+    .category { margin-bottom: 12px; background: white; padding: 12px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid transparent; transition: border 0.2s; }
+    .category:hover { border-color: #d2e3fc; }
+    .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .category-name { font-weight: 700; font-size: 14px; color: #1a73e8; }
+    .site-list { font-size: 10px; color: #70757a; line-height: 1.4; margin-bottom: 10px; }
+    button { background: #1a73e8; color: white; border: none; padding: 10px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: 600; transition: all 0.2s; font-size: 13px; outline: none; }
+    button:hover { background: #1557b0; transform: translateY(-1px); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    button:active { transform: translateY(0); }
+    .btn-slop { background: #ea4335; margin-top: 5px; }
+    .btn-slop:hover { background: #d93025; }
+    .btn-secondary { background: #fff; color: #1a73e8; border: 1px solid #1a73e8; margin-top: 5px; }
+    .btn-secondary:hover { background: #f1f3f4; }
+    .manual-section { margin-top: 15px; background: #fff; padding: 12px; border-radius: 8px; border: 1px solid #dadce0; }
+    input { width: calc(100% - 22px); padding: 10px; border: 1px solid #dadce0; border-radius: 6px; margin-bottom: 8px; font-size: 13px; }
+    input:focus { border-color: #1a73e8; outline: none; box-shadow: 0 0 0 2px rgba(26,115,232,0.2); }
+    .btn-all { background: #202124; margin-top: 15px; padding: 12px; font-size: 14px; }
+    .footer { margin-top: 15px; text-align: center; font-size: 10px; color: #9aa0a6; line-height: 1.4; }
+    .power-note { color: #1a73e8; font-weight: bold; }
+    .bmc-btn { 
+        display: inline-block; background: #FFDD00; color: #000000; padding: 8px 15px; 
+        border-radius: 6px; font-weight: bold; text-decoration: none; margin-top: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s;
+    }
+    .bmc-btn:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+  <h2>FocusSearch v2.6</h2>
+  <div class="section-title">Smart Filters <span class="badge">CURATED</span></div>
+  <div class="category">
+    <div class="category-header"><span class="category-name">Human Conversations</span></div>
+    <div class="site-list">Reddit, Quora, Lemmy, Mastodon, StackExchange, Forums</div>
+    <button id="filterSocial">Show Discussions</button>
+  </div>
+  <div class="category">
+    <div class="category-header"><span class="category-name">Engineering & Code</span></div>
+    <div class="site-list">StackOverflow, GitHub, HN, Dev.to, Substack, Hashnode</div>
+    <button id="filterTech" style="background:#34a853;">Show Technical</button>
+  </div>
+  <div class="section-title">Cleanup Tools</div>
+  <div class="category" style="background: #fdf7f7;">
+    <div class="category-header"><span class="category-name" style="color:#d93025;">The Slop Killer</span></div>
+    <div class="site-list">Pinterest, WikiHow, ExpertVillage, Content Farms</div>
+    <button id="excludeSlop" class="btn-slop">Purge Low-Value Results</button>
+  </div>
+  <div class="category">
+    <div class="category-header"><span class="category-name" style="color:#5f6368;">AI Detox</span></div>
+    <div class="site-list">Removes Google AI Overviews & Shopping ads</div>
+    <button id="filterDetox" class="btn-secondary">Hide AI & Ads</button>
+  </div>
+  <div class="manual-section">
+    <div class="section-title">Deep Drill</div>
+    <input type="text" id="manualSite" placeholder="Specific site (e.g. medium.com)" />
+    <button id="filterManual" style="background:#5f6368;">Focus Domain</button>
+  </div>
+  <button id="filterAll" class="btn-all">The Master Human Filter</button>
+  <div class="footer">
+    <span class="power-note">SUPPORT THE DEV</span><br/>
+    <a href="https://www.buymeacoffee.com/andrei" target="_blank" class="bmc-btn">☕ Buy Me a Coffee</a>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

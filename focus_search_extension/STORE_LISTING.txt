@@ -1,0 +1,18 @@
+
+# Chrome Web Store Listing: FocusSearch
+
+## Summary (Max 132 chars)
+Purge AI-slop, Pinterest, and content farms from Google search results. Force human-first perspectives.
+
+## Detailed Description
+Tired of Google results filled with AI-generated 'slop', Pinterest boards, and SEO content farms? FocusSearch is your one-click escape back to a high-signal web.
+
+### Key Features:
+- 🚫 **The Slop Killer:** Instantly excludes domains like Pinterest, Quora, and known content farms.
+- 🤖 **AI Detox:** Automatically triggers Google's 'Classic Web' view (udm=14), hiding AI Overviews and Shopping widgets.
+- 👥 **Human-First Filters:** Dedicated search buttons for Reddit, forums, and technical engineering sites.
+- 🔒 **Privacy-First:** We don't track you. We don't save your searches. We just clean the UI.
+
+## Support
+Built by Andrei. Support further development: https://buymeacoffee.com/aer.solutions
+    
