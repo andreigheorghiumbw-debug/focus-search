@@ -19,4 +19,4 @@ Everything you need is in the `focus_search_extension/` folder.
 4. Select the `focus_search_extension` folder.
 
 ---
-*Created for the community with 💙 by Andrei.*
+*Created for the community with 💙 by aer.solutions.*
